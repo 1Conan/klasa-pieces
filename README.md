@@ -37,7 +37,7 @@ To submit your own pieces for approval (quick steps):
 
 - Fork this repository
 - Create a new piece in the appropriate folder
-- Lint your code with [klasa-lint](https://github.com/dirigeants/klasa-lint)
+- Lint your code with [klasa-ts-lint](https://github.com/dirigeants/klasa-lint#tslint-rules)
 - Create a Pull Request to the repository
 - Be patient. Someone will approve/deny it as soon as they can
 
