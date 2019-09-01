@@ -59,6 +59,11 @@ export default class extends Provider {
 	public db: FirebaseFirestore.Firestore | null = null;
 
 	async init() {
+		await firebase.initializeApp({
+			credential: firebase.credential.cert(this.client.options.providers.firestore.credentials),
+			databaseURL: this.client.options.providers.firestore.databaseURL
+		});
+
 		this.db = firebase.firestore();
 	}
 
