@@ -129,8 +129,8 @@ export default class extends Provider {
 		return this.db!.collection(table).doc(id).delete();
 	}
 
-	replace(...args: [string, string, FirebaseFirestore.DocumentData]) {
-		return this.create(...args);
+	replace(table: string, id: string, doc: FirebaseFirestore.DocumentData) {
+		return this.create(table, id, doc);
 	}
 
 	async getAll(table: string, filter: unknown[] = []) {
