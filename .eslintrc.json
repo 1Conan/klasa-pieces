@@ -1,12 +1,3 @@
 {
-	"extends": "klasa",
-	"parserOptions": {
-		"sourceType": "module",
-		"ecmaVersion": 2018
-	},
-	"env": {
-		"node": true,
-		"es6": true,
-		"commonjs": true
-	}
+	"extends": "klasa"
 }
