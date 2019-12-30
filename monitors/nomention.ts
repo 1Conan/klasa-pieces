@@ -3,7 +3,6 @@ import { ClientUser, TextChannel } from 'discord.js';
 import { KlasaClient, KlasaMessage, Monitor, MonitorStore } from 'klasa';
 
 export default class extends Monitor {
-
 	constructor(client: KlasaClient, store: MonitorStore, file: string[], dir: string) {
 		super(client, store, file, dir, {
 			enabled: true,
@@ -20,5 +19,4 @@ export default class extends Monitor {
 		if (msg.mentions.everyone) this.client.emit('log', `${user} mentioned everyone in ${channel}`);
 		else if (msg.mentions.users.has((this.client.user as ClientUser).id)) this.client.emit('log', `${user} mentioned you in ${channel}`);
 	}
-
 }

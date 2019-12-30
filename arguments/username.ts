@@ -1,5 +1,5 @@
 // Copyright (c) 2017-2019 dirigeants. All rights reserved. MIT license.
-import { Guild, GuildMember, User,  } from 'discord.js';
+import { Guild, GuildMember, User } from 'discord.js';
 import { Argument, KlasaMessage, Possible, util } from 'klasa';
 
 const USER_REGEXP = Argument.regex.userOrMember;
@@ -18,7 +18,6 @@ function resolveUser(query: GuildMember | User | string, guild: Guild) {
 }
 
 export default class extends Argument {
-
 	async run(arg: string, possible: Possible, msg: KlasaMessage): Promise<User> {
 		if (!msg.guild) return this.store.get('user').run(arg, possible, msg);
 		const resUser = await resolveUser(arg, msg.guild);
@@ -26,9 +25,9 @@ export default class extends Argument {
 
 		const results = [];
 		const reg = new RegExp(util.regExpEsc(arg), 'i');
-		for (const member of msg.guild.members.values()) {
+		for (const member of msg.guild.members.values())
 			if (reg.test(member.user.username)) results.push(member.user);
-		}
+
 
 		let querySearch;
 		if (results.length > 0) {
@@ -45,5 +44,4 @@ export default class extends Argument {
 			default: throw `Found multiple matches: \`${querySearch.map((user) => user.tag).join('`, `')}\``;
 		}
 	}
-
 }

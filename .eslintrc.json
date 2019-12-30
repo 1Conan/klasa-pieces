@@ -1,3 +1,8 @@
 {
-	"extends": "klasa"
+	"extends": "@kcp/lint/eslint-ts",
+	"rules": {
+		"@typescript-eslint/no-triple-slash-reference": 0,
+		"prefer-named-capture-group": 0,
+		"quotes": ["error", "single"]
+	}
 }

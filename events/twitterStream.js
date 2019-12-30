@@ -3,6 +3,8 @@ const { MessageEmbed } = require('discord.js');
 const he = require('he');
 const Twit = require('twit');
 
+// Not rewriting as typings seem out of date
+
 // The channel ID you want the tweets to be sent to
 const tweetChannel = '';
 

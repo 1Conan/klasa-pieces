@@ -2,8 +2,9 @@
 	"name": "klasa-pieces",
 	"description": "This repository contains the various *Pieces* submitted by users and collaborators.",
 	"scripts": {
-		"test:lint": "yarn tslint '*.ts' && yarn markdownlint guides README.md",
-		"build": "yarn tsc"
+		"test:lint": "eslint --ext ts */*.ts",
+		"build": "yarn tsc",
+		"lint": "eslint --ext ts */*.ts --fix"
 	},
 	"repository": {
 		"type": "git",
@@ -12,13 +13,16 @@
 	"license": "MIT",
 	"homepage": "https://github.com/dirigeants/klasa-pieces#readme",
 	"devDependencies": {
-		"@kcp/lint": "github:KlasaCommunityPlugins/lint-files",
+		"@kcp/eslint-config-lint": "klasacommunityplugins/lint-files",
 		"@types/node": "^11.11.6",
 		"@types/node-fetch": "^2.3.6",
+		"@typescript-eslint/eslint-plugin": "^2.3.0",
+		"@typescript-eslint/parser": "^2.3.0",
 		"discord.js": "github:discordjs/discord.js",
+		"eslint": "^6.4.0",
 		"klasa": "github:dirigeants/klasa",
-		"markdownlint-cli": "^0.14.0",
-		"tslint": "^5.14.0",
+		"klasa-dashboard-hooks": "dirigeants/klasa-dashboard-hooks",
+		"rethinkdb-ts": "^2.4.0-rc.16",
 		"typescript": "^3.3.4000"
 	}
 }
