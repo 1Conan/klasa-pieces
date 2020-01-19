@@ -2,7 +2,7 @@
 	"name": "klasa-pieces",
 	"description": "This repository contains the various *Pieces* submitted by users and collaborators.",
 	"scripts": {
-		"test:lint": "yarn tslint '*.ts' && yarn markdownlint guides README.md",
+		"test:lint": "yarn tslint '*.ts'",
 		"build": "yarn tsc"
 	},
 	"repository": {
@@ -15,9 +15,9 @@
 		"@kcp/lint": "github:KlasaCommunityPlugins/lint-files",
 		"@types/node": "^11.11.6",
 		"@types/node-fetch": "^2.3.6",
-		"discord.js": "github:discordjs/discord.js",
-		"klasa": "github:dirigeants/klasa",
-		"markdownlint-cli": "^0.14.0",
+		"discord.js": "github:discordjs/discord.js#master",
+		"eslint": "^6.3.0",
+		"klasa": "github:dirigeants/klasa#settings",
 		"tslint": "^5.14.0",
 		"typescript": "^3.3.4000"
 	}
